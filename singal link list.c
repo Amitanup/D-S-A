@@ -156,6 +156,24 @@ void any_pos_node_add() {
         temp->next = nw;
     }
 }
+void rev_print(){
+    struct node *temp;
+    int count=0;
+    int arr[count];
+    temp=head;
+    while(temp!=NULL)
+    {
+        arr[count]=temp->data;
+        count++;
+        temp=temp->next;
+    }
+    for (int i =count-1; i >=0; i--)
+    {
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+    
+}
 
 int main() {
     int choice;
@@ -168,8 +186,8 @@ int main() {
         printf("4. Delete a node\n");
         printf("5. Insert node at a specific position\n");
         printf("6. Print the list\n");
-        printf("7. reversed number of list :");
-        printf("7. Exit\n");
+        printf("7. reversed number print of list\n");
+        printf("8. Exit\n");
         printf("Enter your choice: ");
 
         scanf("%d", &choice);
@@ -194,6 +212,9 @@ int main() {
                 printe();
                 break;
             case 7:
+                 rev_print();
+                 break;
+            case 8:
                 printf("Exiting...\n");
                 exit(1);
                 break;

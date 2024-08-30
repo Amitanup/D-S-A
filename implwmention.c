@@ -37,6 +37,24 @@ void implemention() {
     }
     printf("\nNumber of nodes: %d\n", count);
 }
+void rev_print(){
+    struct node *temp;
+    int count=0;
+    int arr[count];
+    temp=head;
+    while(temp!=NULL)
+    {
+     arr[count]=temp->data;
+     count++;
+     temp=temp->next;
+    }
+    for (int i = count-1; i >=0; i--)
+    {
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+}
 int main(){
     implemention();
+    rev_print();
 }
