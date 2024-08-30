@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct node {
     int data;
     struct node *next;
@@ -174,6 +175,24 @@ void rev_print(){
     return 0;
     
 }
+void rev(){
+    struct node *x,*y,*z;
+    x=head;
+    y=NULL;
+    if (head==NULL)
+    {
+        printf("List is empty: ");
+    }
+    else{
+        z=y;
+        y=x;
+        x=x->next;
+        y->next=z;
+    }
+    head=y;
+    }
+    
+
 
 int main() {
     int choice;
@@ -187,7 +206,8 @@ int main() {
         printf("5. Insert node at a specific position\n");
         printf("6. Print the list\n");
         printf("7. reversed number print of list\n");
-        printf("8. Exit\n");
+        printf("8. reversed list \n");
+        printf("9. Exit\n");
         printf("Enter your choice: ");
 
         scanf("%d", &choice);
@@ -215,6 +235,9 @@ int main() {
                  rev_print();
                  break;
             case 8:
+                 rev();
+                 break;
+            case 9:
                 printf("Exiting...\n");
                 exit(1);
                 break;
