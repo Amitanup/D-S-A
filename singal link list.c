@@ -79,17 +79,26 @@ void delet() {
     printf("Element not found in the list\n");
 }
 
-void printe() {
-    struct node *temp;
-    int count = 0;
+int printe() {
+int count=0;
+struct node *temp;
+if(temp==NULL)
+{
+    printf("list is empty , no note are ther :");
+    count=0;
+}
+else{
 
-    temp = head;
-    while (temp != NULL) {
-        printf("%d\t", temp->data);
-        temp = temp->next;
-        count++;
-    }
-    printf("\nNumber of nodes: %d\n", count);
+temp=head;
+while (temp!=NULL)
+{
+ printf("%d",temp->data);
+ temp=temp->next;
+ count++;
+}
+printf("%d no note is thear",count);
+}
+return 0;
 }
 
 void append() {
@@ -159,8 +168,10 @@ int main() {
         printf("4. Delete a node\n");
         printf("5. Insert node at a specific position\n");
         printf("6. Print the list\n");
+        printf("7. reversed number of list :");
         printf("7. Exit\n");
         printf("Enter your choice: ");
+
         scanf("%d", &choice);
 
         switch (choice) {
