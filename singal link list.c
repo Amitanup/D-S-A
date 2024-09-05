@@ -190,6 +190,7 @@ void rev(){
         y->next=z;
     }
     head=y;
+    return 0;
     }
     
 
