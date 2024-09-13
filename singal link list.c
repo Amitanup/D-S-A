@@ -20,10 +20,10 @@ void implemention() {
         scanf("%d", &nw->data);
         nw->next = NULL;
         
-        if (head == NULL) {
+        if (head == NULL) { //list is emty
             head = temp = nw;
         } else {
-            temp->next = nw;
+            temp->next = nw;// not emety
             temp = nw;
         }
         
@@ -52,7 +52,7 @@ void add_of_begening() {
 }
 
 void delet() {
-    if (head == NULL) {
+    if (head == NULL) {//list is empty
         printf("List is empty\n");
         return;
     }
@@ -93,11 +93,11 @@ else{
 temp=head;
 while (temp!=NULL)
 {
- printf("%d",temp->data);
+ printf("%d \t",temp->data);
  temp=temp->next;
  count++;
 }
-printf("%d no note is thear",count);
+printf("%d no note is thear \n",count);
 }
 return 0;
 }
@@ -192,13 +192,51 @@ void rev(){
     head=y;
     return 0;
     }
+    void shorting(){
+    struct node *temp = head;
+    int arr[20], n = 0, i, j, temp1;
+    while (temp != NULL) {
+        arr[n] = temp->data;
+        n++;
+        temp = temp->next;
+    }
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap the elements
+                temp1 = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp1;
+            }
+        }
+    }
+    temp = head;
+    for (i = 0; i < n; i++) {
+        temp->data = arr[i];
+        temp = temp->next;
+    }
+
+    
+    }
+    void selactio_shorting(){
+        struct node *temp,*temp1;
+        temp=head;
+        temp1=head;
+        int i,j;
+       for ( i = 0; i < count; i++)
+       {
+        /* code */
+       }
+       
+    }
+
     
 
 
 int main() {
     int choice;
 
-    while (choice != 7){
+    while (choice != 11){
         printf("\nMenu:\n");
         printf("1. Implement the linked list\n");
         printf("2. Add node at the beginning\n");
@@ -208,7 +246,8 @@ int main() {
         printf("6. Print the list\n");
         printf("7. reversed number print of list\n");
         printf("8. reversed list \n");
-        printf("9. Exit\n");
+        printf("9. Shoring the all all number:\n");
+        printf("10. Exit\n");
         printf("Enter your choice: ");
 
         scanf("%d", &choice);
@@ -239,6 +278,9 @@ int main() {
                  rev();
                  break;
             case 9:
+               shorting();
+               break;
+            case 10:
                 printf("Exiting...\n");
                 exit(1);
                 break;
