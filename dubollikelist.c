@@ -35,7 +35,31 @@ void append(){
     int num;
     printf("Enter the number of append in list :");
     scanf("%d",&num);
-    nw=
+    if (head==NULL)
+    {
+     printf("List is empty");
+     nw=(struct node*)malloc(sizeof(struct node));
+     nw->data=num;
+     nw->next=NULL;
+     nw->pre=NULL;
+     head=nw;
+    }
+    else
+    {
+     while (temp->next!=NULL)
+     {
+        temp=temp->next;
+     }
+     nw=(struct node*)malloc(sizeof(struct node));
+     nw->data=num;
+     temp->next=nw;
+     nw->pre=temp;
+     nw->next=NULL;
+     
+    }
+    
+    
+    
 }
 
 void display() {
@@ -54,6 +78,8 @@ void display() {
 
 int main() {
     add_of_bigenig();
+    display();
+    append();
     display();
     return 0;
 }
