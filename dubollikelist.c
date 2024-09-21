@@ -31,7 +31,7 @@ void add_of_bigenig() {
     }
 }
 void append(){
-    struct node *temp,*nw;
+    struct node *temp=head,*nw;
     int num;
     printf("Enter the number of append in list :");
     scanf("%d",&num);
@@ -70,15 +70,15 @@ void display() {
     }
     printf("The list is: ");
     while (temp != NULL) {
-        printf("%d ", temp->data);
+        printf("%d \n", temp->data);
         temp = temp->next;
     }
     printf("\n");
 }
 
 int main() {
-    add_of_bigenig();
-    display();
+    // add_of_bigenig();
+    // display();
     append();
     display();
     return 0;
