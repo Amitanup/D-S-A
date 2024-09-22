@@ -61,6 +61,29 @@ void append(){
     
     
 }
+void rev(){
+    if (head==NULL)
+    {
+        printf("The list is eplty");
+        return;
+    }
+    else{
+        struct node *x,*y,*z;
+        x=head;
+        y=NULL;
+        while (x!=NULL)
+        {
+            z=y;
+            y=x;
+            x=x->next;
+            y->next=z;
+            y->pre=x;
+        }
+        head=y;
+        
+    }
+    
+}
 
 void display() {
     struct node *temp = head;
@@ -77,9 +100,11 @@ void display() {
 }
 
 int main() {
-    // add_of_bigenig();
-    // display();
+    add_of_bigenig();
+    display();
     append();
+    display();
+    rev();
     display();
     return 0;
 }
