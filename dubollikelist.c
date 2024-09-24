@@ -84,6 +84,18 @@ void rev(){
     }
     
 }
+void delid(){
+struct node *temp,
+temp=head;
+    if (head==NULL)
+    {
+        printf("List is empty");
+        return;
+    }
+    else
+    
+    
+}
 
 void display() {
     struct node *temp = head;
