@@ -34,3 +34,4 @@ int main() {
     return 0;
 }
 // using bisection method find the negative root of the  quaction x^3-4*x+9=0
+//
