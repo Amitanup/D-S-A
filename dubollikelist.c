@@ -112,11 +112,8 @@ void display() {
 }
 
 int main() {
-    add_of_bigenig();
-    display();
-    append();
-    display();
-    rev();
+    // 
+    
     display();
     return 0;
 }
