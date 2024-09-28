@@ -84,18 +84,18 @@ void rev(){
     }
     
 }
-void delid(){
-struct node *temp,
-temp=head;
-    if (head==NULL)
-    {
-        printf("List is empty");
-        return;
-    }
-    else
+// void delid(){
+// struct node *temp,
+// temp=head;
+//     if (head==NULL)
+//     {
+//         printf("List is empty");
+//         return;
+//     }
+//     else
     
     
-}
+// }
 
 void display() {
     struct node *temp = head;
@@ -110,10 +110,37 @@ void display() {
     }
     printf("\n");
 }
+void add_after(){
+    int i,pos,num;
+    struct node *temp,*nw;
+    printf("Enter the position in insart a node");
+    scanf("%d",&pos);
+    temp=head;
+    for ( i = i; i < pos; i++)
+    {
+        if (temp==NULL)
+        {
+            printf("Envalied posetion youy insarting :");
+            return;
+        }
+        
+    }
+    nw=(struct node*)malloc(sizeof(struct node));
+    printf("Enetr the number of you insart the element :");
+    scanf("%d",&num);
+   nw->data=num;
+   nw->next=temp->next;
+   nw->pre=temp;
+   temp->next->pre=nw;
+   temp->next=nw; 
+    
+
+}
 
 int main() {
-    // 
-    
+     add_of_bigenig();
+     display();
+     add_after();    
     display();
     return 0;
 }
