@@ -136,11 +136,50 @@ void add_after(){
     
 
 }
+void delet(){
+    if (head==NULL)
+    {
+        printf("|list is empty no note is their :")
+        return;
+    }
+  int num;
+  printf("Enter thr number to have deleted :");
+  scanf("%d",&num);
+  struct node *temp, *old ;
+  temp=head;
+  while (temp!=NULL)
+  {
+    if (temp->data=num)
+    {
+        if (temp==head)
+        {
+            temp->pre=NULL;
+            head=temp->next;
+        }
+        else{
+            old->next=temp->next
+            temp->pre=old->next;
+
+        }
+        
+        
+    }
+    else
+    {
+        old=temp;
+        temp=temp->next;
+    }
+    
+    
+  }
+     
+}
 
 int main() {
      add_of_bigenig();
      display();
-     add_after();    
+     add_after();
+     delet();    
     display();
     return 0;
 }
