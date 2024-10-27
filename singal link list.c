@@ -157,6 +157,22 @@ void any_pos_node_add() {
         temp->next = nw;
     }
 }
+void delet(){
+    int num;
+    struct node *temp,*old;
+    if (head==NULL)
+    {
+        printf("list is empty ");
+        return;
+    }
+    else
+    {
+        
+    }
+    
+    
+
+}
 void rev_print(){
     struct node *temp;
     int count=0;

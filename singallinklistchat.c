@@ -91,7 +91,7 @@ void delet() {
 }
 
 // Function to print the entire list
-int printe() {
+int sum() {
     int count = 0;
     struct node *temp = head;
 
@@ -109,15 +109,6 @@ int printe() {
     }
     return 0;
 }
-
-// Function to append a node at the end of the list
-void append() {
-    struct node *temp, *nw;
-    int numb;
-    
-    nw = (struct node*)malloc(sizeof(struct node)); // Allocate memory for new node
-    printf("Enter the number of new node data: ");
-    scanf("%d", &numb);
     nw->data = numb;
     nw->next = NULL;
 
@@ -271,7 +262,7 @@ int main() {
                 add_of_begening();
                 break;
             case 3:
-                append();
+                sum();
                 break;
             case 4:
                 delet();
@@ -280,7 +271,7 @@ int main() {
                 any_pos_node_add();
                 break;
             case 6:
-                printe();
+                sum();
                 break;
             case 7:
                  rev_print();
