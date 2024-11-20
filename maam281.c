@@ -60,3 +60,5 @@ int main() {
 
     return 0;
 }
+write a c program to using trapezoidal rule
+x=0

@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "C++ New",
+			"path": "../../C++ New"
+		},
+		{
+			"name": "D S A",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"array": "c",
+			"string": "c",
+			"maam_1_10.C": "cpp",
+			"random": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "C++ New"
+	}
+}
